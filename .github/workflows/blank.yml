@@ -1,4 +1,17 @@
-name: Connect
-tasks:
-    - name: Open TCP tunnel with ngrok
-      shell: "ngrok tcp 22"
+name: CI
+ 
+on: [push, workflow_dispatch]
+ 
+jobs:
+    - name: install ngrok
+    shell: |
+        cd /tmp
+        wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+        unzip ngrok-stable-linux-amd64.zip
+        sudo mv ngrok /usr/local/bin/ngrok
+    - name: Set ngrok authtoken
+      lineinfile:
+        path: ~/.ngrok2/ngrok.yml
+        line: "authtoken: your_ngrok_authtoken"
+     - name: Open TCP tunnel with ngrok
+     shell: "ngrok tcp 22"
