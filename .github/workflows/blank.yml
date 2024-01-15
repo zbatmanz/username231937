@@ -1,4 +1,4 @@
-- name: Connect to Linux server and configure ngrok
+name: Connect to Linux server and configure ngrok
   hosts: 159.167.54
   gather_facts: False
   remote_user: "root"
