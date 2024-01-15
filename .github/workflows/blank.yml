@@ -1,9 +1,4 @@
 name: Connect
-hosts: 159.167.54
-gather_facts: False
-remote_user: "god"
-become: True
-
 tasks:
     - name: Open TCP tunnel with ngrok
       shell: "ngrok tcp 22"
