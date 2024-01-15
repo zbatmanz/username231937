@@ -1,11 +1,10 @@
 name: Connect to Linux server and configure ngrok
-  hosts: 159.167.54
-  gather_facts: False
-  remote_user: "root"
-  become: True
+hosts: 159.167.54
+gather_facts: False
+remote_user: "root"
+become: True
 
-  tasks:
-
+tasks:
     - name: Install ngrok
       shell: |
         cd /tmp
