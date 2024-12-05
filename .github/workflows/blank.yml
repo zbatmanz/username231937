@@ -12,6 +12,6 @@ jobs:
     - name: Set ngrok authtoken
       lineinfile:
         path: ~/.ngrok2/ngrok.yml
-        line: "authtoken: your_ngrok_authtoken"
+        line: "authtoken: 2audaLEp4eMmq4EcQhGe3RhMy6F_7EnuK4mQarfyeNDBK7v4c"
      - name: Open TCP tunnel with ngrok
      shell: "ngrok tcp 22"
